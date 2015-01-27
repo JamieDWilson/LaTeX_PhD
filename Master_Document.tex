@@ -1,0 +1,35 @@
+\documentclass[12pt,oneside]{report}
+
+% -- All formatting -- %%
+
+\usepackage{Thesis_Formatting}
+
+%\includeonly{./tex/chapter_example}		% option to compile certain chapters only (n.b. Issues with BibTeX when selected)
+
+\begin{document}
+
+% -- Frontmatter -- %
+
+\include{./tex/front_matter}
+
+% -- Main Chapters -- %
+
+\pagenumbering{arabic}						% change page numbering to arabic
+
+\include{./tex/chapter_example}
+
+% -- References -- %
+
+\include{./tex/references}
+
+% -- Appendices -- %
+
+\begin{appendices}
+
+%\include{./tex/appendix_example}
+
+
+\end{appendices}
+
+\end{document}
+

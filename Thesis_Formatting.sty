@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Thesis_Formatting.sty
+%
+% contains all formatting related commands
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\ProvidesPackage{Thesis_Formatting}
+
+% -- Add packages to be used in Master Document -- %
+%\usepackage{}
+
+\usepackage{titlesec}										% \chapter formatting
+\usepackage[round]{natbib}								% reference formatting
+\usepackage{parskip} 										% allow seperate paragraphs
+\usepackage{amsmath}								   	% maths
+\usepackage{setspace}										% spacing options
+%\usepackage{fancyhdr}									% header/footer
+\usepackage{hyperref}										% hyper links for TOC
+\usepackage{graphicx}									% graphics
+\usepackage[top=2cm, bottom=2cm, left=4cm, right=2cm]{geometry}  % margins
+\usepackage[titletoc]{appendix}					  	% appendices
+\usepackage{fixltx2e}										% super/subscript
+\usepackage{pdfpages}									% add in pdf pages
+\usepackage{pdflscape}									% easy landscape pages
+\usepackage{longtable}									% tables that can span across pages
+\usepackage{gensymb}									% symbols...degree symbol
+%\usepackage{arydshln}										% dashed lines in tables
+%\usepackage[useliterate]{mcode}  % matlab colouring
+\usepackage[nottoc,numbib]{tocbibind}
+
+
+% -- Preamble -- %
+\setcounter{tocdepth}{3}																				% TOC include subsubsections
+\setcounter{secnumdepth}{3}																		% numbering for subsubsections
+%\titleformat{\chapter}{\normalfont\Huge\bfseries\centering}{\thechapter.}{20pt}{\huge}			% chapter formatting
+\titleformat{\chapter}[display]{\normalfont\Large\bfseries}{\filcenter\underline{\MakeUppercase{{\chaptertitlename}}\ \thechapter}}{20pt}{\Large\centering}
+%\titleformat{\chapter}{\normalfont\huge\bfseries}{\thechapter.}{20pt}{\huge}	
+\renewcommand\bibname{References}														% rename bib to references
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}  % TOC hyperlinks
+
+%\pagestyle{fancy}
+%\fancyhf{}
+%\rhead{}
+%\lhead{\chaptername  \thechapter}
+
+
+
+% -- new commands --%
+%\newcommand{\caco3}{CaCO\textsubscript{3}}
+\newcommand{\phosphate}{PO\textsubscript{4}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+% --- USER --- %
+\doublespacing 																							% line spacing option
+%\onehalfspacing																							% line spacing option
+
+%\usepackage[urw-garamond]{mathdesign}			
+%\usepackage[T1]{fontenc}
+%\renewcommand{\familydefault}{\sfdefault}												% change font to sans-serif
