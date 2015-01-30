@@ -6,6 +6,10 @@ This README contains information for downloading the Cardiff Earth and Ocean Sci
 
 To get the template files only, go to the Downloads option on the menu to the left and download!
 
+## New to LaTeX? ##
+
+There is How-To document in the how-to folder that contains a PDF document with a basic introduction to go with the template.  The template itself has examples of the major elements of the thesis document.
+
 ## How can I contribute to the template ##
 
 If you are adapting the template, feel free to update the template with new options, particularly for formatting.  
