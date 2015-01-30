@@ -56,11 +56,36 @@
 
 \titleformat{\chapter}
 	[display]
-	{\normalfont\Large\bfseries}
-	{\centering\underline{\MakeUppercase{{\chaptertitlename}}\  \thechapter}}
+	{\normalfont\huge\bfseries}
+	{\centering\underline{{{\chaptertitlename}}\  \thechapter}}
 	{20pt}
 	{\Large\centering}
 	[]
+
+\titleformat{\section}
+	[hang]
+	{\normalfont\large\bfseries}
+	{\thesection}
+	{20pt}
+	{\large}
+	[]
+
+\titleformat{\subsection}
+	[hang]
+	{\normalfont\normalsize\bfseries}
+	{\thesection}
+	{20pt}
+	{\normalsize}
+	[]
+	
+\titleformat{\subsubsection}
+	[hang]
+	{\normalfont\normalsize\itshape}
+	{\thesection}
+	{20pt}
+	{\normalsize}
+	[]
+	
 
 %--- Headers ---%
 %\usepackage{fancyhdr}									% fancy header package (see http://anorien.csc.warwick.ac.uk/mirrors/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf)
