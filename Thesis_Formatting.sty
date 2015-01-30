@@ -7,58 +7,85 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \ProvidesPackage{Thesis_Formatting}
 
-% -- Add packages to be used in Master Document -- %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% -- Generic packages to be used in Master Document -- %
 %\usepackage{}
 
-\usepackage{titlesec}										% \chapter formatting
 \usepackage[round]{natbib}								% reference formatting
 \usepackage{parskip} 										% allow seperate paragraphs
 \usepackage{amsmath}								   	% maths
 \usepackage{setspace}										% spacing options
-%\usepackage{fancyhdr}									% header/footer
-\usepackage{hyperref}										% hyper links for TOC
-\usepackage{graphicx}									% graphics
-\usepackage[top=2cm, bottom=2cm, left=4cm, right=2cm]{geometry}  % margins
-\usepackage[titletoc]{appendix}					  	% appendices
-\usepackage{fixltx2e}										% super/subscript
+\usepackage{graphicx}									% including graphics
+\usepackage[titletoc]{appendix}					  	% add "Appendix" in appendices titles
+\usepackage{fixltx2e}										% super/subscript options
 \usepackage{pdfpages}									% add in pdf pages
 \usepackage{pdflscape}									% easy landscape pages
 \usepackage{longtable}									% tables that can span across pages
 \usepackage{gensymb}									% symbols...degree symbol
-%\usepackage{arydshln}										% dashed lines in tables
-%\usepackage[useliterate]{mcode}  % matlab colouring
-\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[nottoc,numbib]{tocbibind}			% add references section to Table of Contents
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% -- Preamble -- %
-\setcounter{tocdepth}{3}																				% TOC include subsubsections
-\setcounter{secnumdepth}{3}																		% numbering for subsubsections
-%\titleformat{\chapter}{\normalfont\Huge\bfseries\centering}{\thechapter.}{20pt}{\huge}			% chapter formatting
-\titleformat{\chapter}[display]{\normalfont\Large\bfseries}{\filcenter\underline{\MakeUppercase{{\chaptertitlename}}\ \thechapter}}{20pt}{\Large\centering}
-%\titleformat{\chapter}{\normalfont\huge\bfseries}{\thechapter.}{20pt}{\huge}	
-\renewcommand\bibname{References}														% rename bib to references
-\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}  % TOC hyperlinks
+% -- Common Options -- %
+\setcounter{tocdepth}{3}																				% Table of Contents to include subsubsections (comment out to have only up to subsections) 
+\setcounter{secnumdepth}{3}																		% numbering for subsubsections (comment out if no numbering is wanted)
+\renewcommand\bibname{References}														% rename bibliography to references (comment out if you want "Bibliography" as a title)
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%---Line Spacing---%
+\doublespacing 																							% double spaced (choose either)
+%\onehalfspacing																							% one and a half spaced (choose either)
+
+%--- Margins ---%
+\usepackage{geometry}   % margins package
+\geometry{top=2cm, bottom=2cm, left=4cm, right=2cm}  % set to Cardiff thesis standards 2014
+
+%--- Section Title Formatting ----%
+\usepackage{titlesec}
+% from http://tug.ctan.org/macros/latex/contrib/titlesec/titlesec.pdf
+% basic usage: \titleformat{command} - section title to be formatted e.g. \chapter, \section, \subsection ...
+%	[shape] - shape of section, see documentation pg. 3 in link above
+%  {format} - formatting for the header text
+%	{label} - format the the header text e.g. CHAPTER 1
+%	{sep} - horizonal space between label and title body
+%	{before-code} - format the text of your title
+%	[after-code] - ?
+
+\titleformat{\chapter}
+	[display]
+	{\normalfont\Large\bfseries}
+	{\centering\underline{\MakeUppercase{{\chaptertitlename}}\  \thechapter}}
+	{20pt}
+	{\Large\centering}
+	[]
+
+%--- Headers ---%
+%\usepackage{fancyhdr}									% fancy header package (see http://anorien.csc.warwick.ac.uk/mirrors/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf)
 %\pagestyle{fancy}
 %\fancyhf{}
 %\rhead{}
 %\lhead{\chaptername  \thechapter}
 
+%--- Hyperlinks ---%
+\usepackage{hyperref}										% hyper links package
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}  % set all hyperlinks to black colouring
 
+%--- Fonts ---%
+% ...you are letting yourself in for a whole new world of pain! 
+% by default font is a LaTeX serif font but if you insist...
+
+%\renewcommand{\familydefault}{\sfdefault}												% change font to sans-serif 
+
+% for other fonts, see here: http://www.tug.dk/FontCatalogue/
+% if you are using TeXLive try this for garamond for example 
+% (otherwise manually install common fonts, see: https://www.tug.org/fonts/getnonfreefonts/)
+%\usepackage[urw-garamond]{mathdesign}			 % garamond package 
+%\usepackage[T1]{fontenc}										 % er not actually sure but suggested by FontCatalogue	
 
 % -- new commands --%
-%\newcommand{\caco3}{CaCO\textsubscript{3}}
-\newcommand{\phosphate}{PO\textsubscript{4}}
+% create a new command to save time n.b. this doesn't like commands that end with numbers so can be a bit useless for things like CO2
+\newcommand{\phosphate}{PO\textsubscript{4}}	% example: get PO4 by using \phosphate in document
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
-
-% --- USER --- %
-\doublespacing 																							% line spacing option
-%\onehalfspacing																							% line spacing option
-
-%\usepackage[urw-garamond]{mathdesign}			
-%\usepackage[T1]{fontenc}
-%\renewcommand{\familydefault}{\sfdefault}												% change font to sans-serif
