@@ -58,6 +58,12 @@ Both websites will have a link to download the files (it might take a small whil
 If you're feeling really nerdy you can do everything on the command line but using an editor is so much easier.  There are loads of options but texmaker is a good bet.  It works on Windows and Mac, has a built in PDF viewer so you can always see what your document looks like and has lots of shortcuts and autofill options (There is also a portable version that can run without having to ask IT):\\
 \url{http://www.xm1math.net/texmaker/}
 
+If you prefer something a little more like Word try out BaKoMa:
+\url{http://www.bakoma-tex.com/menu/about.php}
+
+or LyX:
+\url{http://www.lyx.org/}
+
 \subsection{The Basics}
 Basic \LaTeX{} is just text with commands mixed in.  Commands always start with a `\verb!\!', and have arguments in curly brackets `\verb!{}!'. For example, \verb!\textit{some text}! is a command to italicise some text. Some more complex commands will have square brackets `\verb![]!' before the curly ones that allow you to select different options such as when you want to include a figure (see Section \ref{sec:figures}).
 
@@ -159,7 +165,7 @@ The \textit{Front\_Matter.tex} file in \textit{tex} folder contains everything b
 The title page is in a separate file in the \textit{tex} folder as its not a simple piece of code.  The current title page format was adapted from an example on the WikiBook.  The relevant details can be changed to suit you.
 
 \section{Formatting} \label{sec:formatting}
-Tweaking the look and design of the thesis is a little more complicated.  Everything formatting and structure related is found in the \textit{Thesis\_Formatting.sty} file in the main folder.  It has been organised into two sections: packages, preamble.  The packages are pre-defined bits of code that do specific things.  For example, the parskip package lets \LaTeX{} recognise white-space in the text as a paragraph break (by default you would have hanging paragraphs).  If you want to do something specific in your thesis, google it and most likely someone will have made a package. The preamble section contains commands that set certain things up such as the formatting of chapter titles.
+Tweaking the look and design of the thesis is a little more complicated.  Everything formatting and structure related is found in the \textit{Thesis\_Formatting.sty} file in the main folder.  It has been organised into three main sections.  The first section contains commands to load packages, which are pre-defined bits of code that do specific things.  For example, the parskip package lets \LaTeX{} recognise white-space in the text as a paragraph break (by default you would have hanging paragraphs).  If you want to do something specific in your thesis, google it and most likely someone will have made a package. The second section contains common one-off user options.  The third section contains the main formatting options.  Each option usually has an associated package followed by some options.  I've tried to lay out common things like header font options so you can play around with them as well as providing links for more information.
 
 \section{Resources} \label{sec:resources}
 
