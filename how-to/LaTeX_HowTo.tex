@@ -39,7 +39,7 @@ This How-To document is designed as a basic introduction for the Earth and Ocean
 
 \LaTeX{} is great at making final documents but is not as useful when drafting them. I'm assuming you'll be drafting chapters in Word first\footnote{Supervisors often want to track changes so drafting in Word is a good idea.  It also means you can still use Word to make your thesis if you don't like \LaTeX.} and then using \LaTeX{} to create your thesis.
 
-This How-To will cover just the basics of using the template but if want to learn about using \LaTeX in general there is a list of resources in Section \ref{sec:resources} including a cheat-sheet listing common commands.  The How-To is set out in order of effort needed.  For example, formatting is last on the list as this is where things could get the most complicated.
+This How-To will cover just the basics of using the template but if want to learn about using \LaTeX{} in general there is a list of resources in Section \ref{sec:resources} including a cheat-sheet listing common commands.  The How-To is set out in order of effort needed.  For example, formatting is last on the list as this is where things could get the most complicated.
 
 \section{Getting Started}
 
@@ -55,14 +55,30 @@ For Mac,  MacTeX is commonly used and also comes with useful extra features:\\
 Both websites will have a link to download the files (it might take a small while to download) which will have an installer like any other programme. 
 
 \subsection{Installing an Editor}
-If you're feeling really nerdy you can do everything on the command line but using an editor is so much easier.  There are loads of options but texmaker is a good bet.  It works on Windows and Mac, has a built in PDF viewer so you can always see what your document looks like, has common shortcuts like ctrl-I for italics, a pdf wordcount (rightclick the pdf window and select from menu) and autofill options (There is also a portable version that can run without having to ask IT):\\
+If you're feeling really nerdy you can do everything on the command line but using an editor is so much easier.  There are loads of options but texmaker is a good bet.  It works on Windows and Mac, has a built in PDF viewer so you can always see what your document looks like, has common shortcuts like control-I for italics, a PDF wordcount (rightclick the PDF window and select from menu) and autofill options. There is also a portable version that can run without having to ask IT to install it:
+
 \url{http://www.xm1math.net/texmaker/}
 
-If you prefer something a little more like Word try out BaKoMa:
+If you prefer something a little more like Word try out BaKoMa:\\
 \url{http://www.bakoma-tex.com/menu/about.php}
 
 or LyX:
 \url{http://www.lyx.org/}
+
+
+\begin{landscape}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{TeXMaker_screenshot}
+\caption{Screenshot of texmaker}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{BaKoMa_screenshot.jpg}
+\caption{Screenshot of BaKoMa}
+\end{figure}
+\end{landscape}
 
 \subsection{The Basics}
 Basic \LaTeX{} is just text with commands mixed in.  Commands always start with a `\verb!\!', and have arguments in curly brackets `\verb!{}!'. For example, \verb!\textit{some text}! is a command to italicise some text. Some more complex commands will have square brackets `\verb![]!' before the curly ones that allow you to select different options such as when you want to include a figure (see Section \ref{sec:figures}).
@@ -72,7 +88,7 @@ The `\verb!%!' is a comment character.  Any text after a \verb!%! is a comment i
 \LaTeX{} files have the extension `.tex'.
 
 \subsection{The Thesis Template}
-The template is formed of one folder with work organised into subfolders.  The \textit{Master\_Document.tex} sits in the main folder along with files that deal with formatting and reference.  The PDF file will also appear here along with some files that \LaTeX will use to keep track of everything.  The \textit{tex} folder contains all the text files for chapters, appendices, and the front matter.  Figure files can be found in the \textit{fig} folder and tables in the \textit{tab} folder.  The \textit{admin} folder is for anything extra that is useful to keep with the files such as a thesis plan.  Feel free to change the structure if you want.  
+The template is formed of one folder with work organised into subfolders.  The \textit{Master\_Document.tex} sits in the main folder along with files that deal with formatting and reference.  The PDF file will also appear here along with some files that \LaTeX{} will use to keep track of everything.  The \textit{tex} folder contains all the text files for chapters, appendices, and the front matter.  Figure files can be found in the \textit{fig} folder and tables in the \textit{tab} folder.  The \textit{admin} folder is for anything extra that is useful to keep with the files such as a thesis plan.  Feel free to change the structure if you want.  
 
 If you want to work on the files on a different computer, the folder system is self-contained so all you need to do is copy the main folder over.
 
@@ -98,7 +114,13 @@ The text in the curly brackets is the location of the .tex file to be read in.  
 \subsubsection{Making the PDF}
 To compile the file and get your PDF in Texmaker, choose the `PDFLaTeX' option from the dropdown menu at the top of the main window and press the arrow to compile it.  To view the PDF, choose `View PDF' from the dropdown menu to the right of the last one and press the arrow button.  When you compile the PDF, a little window should pop at the bottom to tell you how it went, often there will be errors but it does at least tell which file and the line number they occur on!  
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{compile_screenshot}
+\end{figure}
+
 It's good idea to compile \textit{Master\_Document.tex} twice in a row. When \LaTeX{} has to make note of the internal document structure it is too too late to actually write it to the PDF...it's weird but that's how it works!  This is often the case for Table of Contents and for citations.
+
 
 \subsection{Chapters}
 Each chapter file begins with \verb!\chapter{}! with the title of your chapter in the curly brackets.  The \verb!\label{}! command allows you give this chapter heading a unique reference which you can use to automatically refer to this chapter number anywhere in the thesis using \verb!\ref{}!.  
@@ -106,7 +128,7 @@ Each chapter file begins with \verb!\chapter{}! with the title of your chapter i
 \subsubsection{Section Headers and Text}
 Section headers work the same way as Chapter titles, you just enter the header text within the curly brackets.  There are three levels of section headers you can use.  
 
-The actual text is just text except when you need to specify any special characters or formatting like italics. Paragraphs are seperated by a space like in word\footnote{This is controlled by the package `parskip' in the \textit{Thesis\_Formatting.sty} file. By default, \LaTeX{} produces a hanging paragraph which you get by commenting out or deleting the parskip package command.}.
+The actual text is just text except when you need to specify any special characters or formatting like italics. Paragraphs are seperated by a space like in word\footnote{This is controlled by the package `parskip' in the \textit{Thesis\_Formatting.sty} file. By default, \LaTeX{} produces a hanging paragraph which you can get by commenting out or deleting the parskip package command.}.
 
 \subsubsection{Figures} \label{sec:figures}
 Figures have a few lines of special code.  The \verb!\begin{figure}! and \verb!end{figure}! are a special `environment' for figures (often called a float environment).  The \verb!\centering! command center justifies the figure.  The actual figure is inserted using the \verb!includegraphics! command using the location of the figure file. The scale part allows you to scale the size of the figure i.e. 0.5 is half the size.
@@ -157,6 +179,11 @@ To cite an article you will mainly use one of two options.  \verb!\citep{Wilson2
 
 \subsection{Running \LaTeX{} with References}
 There is one extra step to incorporate the references properly.  In texmaker, choose BibTeX from the drop down menu and click the arrow run button.  You will then have to choose PdfLaTeX again and run it at least once.  You only have to do this additional BibTeX run when you have added citations and references.    
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{bibtex_screenshot}
+\end{figure}
 
 \section{Front Matter} \label{sec:front_matter}
 The \textit{Front\_Matter.tex} file in \textit{tex} folder contains everything before the first chapter.  The abstract, a page for notes and acknowledgements are chapters that are left unumbered by the \verb!*!. The declarations are included as a PDF file, taken from the Cardiff Uni website.

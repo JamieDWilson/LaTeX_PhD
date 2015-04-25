@@ -4,16 +4,18 @@
 
 \includepdf[pages=-]{./fig/declaration.pdf}
 
-\pagenumbering{roman}							%start  roman numeral page numbers
+\pagenumbering{roman}							% start  roman numeral page numbers
 
-\chapter*{Abstract}		% Abstract
+\chapter*{Abstract} \label{ch:abstract}		% Abstract
+\addcontentsline{toc}{chapter}{\nameref{ch:abstract}} % adds abstract to table of contents
 \begin{singlespacing}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit nisi ligula, vitae dignissim magna egestas et. Donec id augue dolor. Morbi aliquet diam turpis, ut molestie est ornare nec. Nulla ullamcorper libero quis nibh aliquam tempor. Nam viverra consequat ullamcorper. Duis sed ullamcorper nisl. Integer scelerisque imperdiet massa nec feugiat. Duis faucibus accumsan eros vel porta. Aliquam erat volutpat. Praesent ultrices tellus et convallis consectetur. Nullam ullamcorper, dolor varius placerat convallis, mauris massa tristique urna, ut ornare arcu magna ac erat. Sed tempus eu mi eu porta. Curabitur dolor turpis, volutpat vel placerat ac, accumsan vitae mauris. In mattis ante sem, quis imperdiet ligula laoreet eget. Etiam ut fringilla nibh, a feugiat orci.
 
 \end{singlespacing}
 
-\chapter*{Author's Note}		% Note section if needed
+\chapter*{Author's Note}	\label{ch:authors_note}	% Note section if needed
+\addcontentsline{toc}{chapter}{\nameref{ch:authors_note}}
 \begin{singlespacing}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit nisi ligula, vitae dignissim magna egestas et. Donec id augue dolor. Morbi aliquet diam turpis, ut molestie est ornare nec. Nulla ullamcorper libero quis nibh aliquam tempor. Nam viverra consequat ullamcorper. Duis sed ullamcorper nisl. Integer scelerisque imperdiet massa nec feugiat. Duis faucibus accumsan eros vel porta. Aliquam erat volutpat. Praesent ultrices tellus et convallis consectetur. Nullam ullamcorper, dolor varius placerat convallis, mauris massa tristique urna, ut ornare arcu magna ac erat. Sed tempus eu mi eu porta. Curabitur dolor turpis, volutpat vel placerat ac, accumsan vitae mauris. In mattis ante sem, quis imperdiet ligula laoreet eget. Etiam ut fringilla nibh, a feugiat orci.
@@ -27,7 +29,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit nisi 
 \end{center}
 
 
-\chapter*{Acknowledgements} % Acknowledgements
+\chapter*{Acknowledgements} \label{ch:acknowledgements} % Acknowledgements
+\addcontentsline{toc}{chapter}{\nameref{ch:acknowledgements}}
 \begin{singlespacing}
 
 Cheers 

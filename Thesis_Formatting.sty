@@ -17,7 +17,7 @@
 \usepackage[round]{natbib}								% reference formatting
 \usepackage{parskip} 										% allow seperate paragraphs
 \usepackage{amsmath}								   	% maths
-\usepackage{setspace}										% spacing options
+\usepackage{setspace}									% spacing options
 \usepackage{graphicx}									% including graphics
 \usepackage[titletoc]{appendix}					  	% add "Appendix" in appendices titles
 \usepackage{fixltx2e}										% super/subscript options
@@ -25,7 +25,7 @@
 \usepackage{pdflscape}									% easy landscape pages
 \usepackage{longtable}									% tables that can span across pages
 \usepackage{gensymb}									% symbols...degree symbol
-\usepackage[nottoc,numbib]{tocbibind}			% add references section to Table of Contents
+\usepackage[nottoc]{tocbibind}						% add references section to Table of Contents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -73,7 +73,7 @@
 \titleformat{\subsection}
 	[hang]
 	{\normalfont\normalsize\bfseries\raggedright}
-	{\thesection}
+	{\thesubsection}
 	{20pt}
 	{\normalsize}
 	[]
@@ -81,7 +81,7 @@
 \titleformat{\subsubsection}
 	[hang]
 	{\normalfont\normalsize\itshape\raggedright}
-	{\thesection}
+	{\thesubsubsection}
 	{20pt}
 	{\normalsize}
 	[]
@@ -89,10 +89,14 @@
 
 %--- Headers ---%
 %\usepackage{fancyhdr}									% fancy header package (see http://anorien.csc.warwick.ac.uk/mirrors/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf)
-%\pagestyle{fancy}
-%\fancyhf{}
-%\rhead{}
-%\lhead{\chaptername  \thechapter}
+
+% this creates some headers at the top of your page.  It's not the most easy to use but below shows an example.
+% this will add annoying headers to the frontmatter and appendices so use \pagestyle{empty} in .tex files when you want to remove it. Tt will undo headers for the rest of the document so use \pagesyle{fancy} if you want to turn them back on afterwards.
+
+%\pagestyle{fancy}															% turn headers on for the document initally
+%\rhead{\nouppercase{\rightmark}}									% prints section title and number in top right of page
+%\lhead{\nouppercase{Chapter} \thechapter}					% prints Chapter and chapter number in top left of page
+%\renewcommand{\sectionmark}[1]{\markright{#1}{}}			% remove the section number leaving only title
 
 %--- Hyperlinks ---%
 \usepackage{hyperref}										% hyper links package
@@ -114,3 +118,6 @@
 % create a new command to save time n.b. this doesn't like commands that end with numbers so can be a bit useless for things like CO2
 \newcommand{\phosphate}{PO\textsubscript{4}}	% example: get PO4 by using \phosphate in document
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\ie}{\textit{i.e.,}}		% use as \ie{} to get i.e.,
+\newcommand{\eg}{\textit{e.g.,}}		% use as \eg{} to get e.g.,
+\newcommand{\cf}{\textit{cf.}}			% use as \cf{} to get cf.,
