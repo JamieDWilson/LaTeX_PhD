@@ -1,6 +1,6 @@
 # README #
 
-This README contains information for downloading the Cardiff Earth and Ocean Sciences LaTeX PhD Thesis template.
+This README contains information for a Cardiff Earth and Ocean Sciences LaTeX PhD Thesis template.
 
 ## How do I get just the template files? ##
 
@@ -16,4 +16,4 @@ If you are adapting the template, feel free to update the template with new opti
 
 ## Who do I talk to? ##
 
-* We're still in the process of getting everything set up.  In the mean time contact either Jamie Wilson (wilsonjd@cardiff.ac.uk) or Matthew Price (PriceMG@cardiff.ac.uk)
+* Jamie Wilson (jamie.wilson@bristol.ac.uk)
